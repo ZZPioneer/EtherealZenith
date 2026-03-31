@@ -464,7 +464,7 @@ function App() {
                       {language === 'zh' ? '公众号' : 'WeChat'}
                     </h3>
                     <p className="text-lg opacity-70 text-gray-500 dark:text-gray-400 transition-colors duration-300">
-                      {content.socials?.wechat || 'Lun3cy'}
+                      {content.socials?.wechat || 'EtherealZenith'}
                     </p>
                     
                     {/* Glassmorphism Tooltip */}
@@ -514,7 +514,7 @@ function App() {
                       {language === 'zh' ? '小红书' : 'RED'}
                     </h3>
                     <p className="text-lg opacity-70 text-gray-500 dark:text-gray-400 transition-colors duration-300">
-                      {content.socials?.xiaohongshu || 'Lun3cy'}
+                      {content.socials?.xiaohongshu || 'EtherealZenith'}
                     </p>
 
                     {/* Glassmorphism Tooltip */}
@@ -564,7 +564,7 @@ function App() {
                       Bilibili
                     </h3>
                     <p className="text-lg opacity-70 text-gray-500 dark:text-gray-400 transition-colors duration-300">
-                      {content.socials?.bilibili || 'Lun3cy'}
+                      {content.socials?.bilibili || 'EtherealZenith'}
                     </p>
 
                     {/* Glassmorphism Tooltip */}
@@ -583,7 +583,7 @@ function App() {
                  {/* Socials - 500px */}
                  <div 
                     className="block p-12 border-2 border-gray-100 dark:border-gray-800 rounded-[2rem] hover:border-black dark:hover:border-white transition-colors duration-300 group cursor-pointer relative"
-                    onClick={() => window.open('https://500px.com.cn/LuN3cy', '_blank')}
+                    onClick={() => window.open('https://500px.com.cn/EtherealZenith', '_blank')}
                     onMouseEnter={(e) => {
                        const tooltip = document.getElementById('px-tooltip');
                        if (tooltip) {
@@ -614,7 +614,7 @@ function App() {
                       500px
                     </h3>
                     <p className="text-lg opacity-70 text-gray-500 dark:text-gray-400 transition-colors duration-300">
-                      {content.socials?.px500 || 'LuN3cy'}
+                      {content.socials?.px500 || 'EtherealZenith'}
                     </p>
 
                     {/* Glassmorphism Tooltip */}
@@ -633,7 +633,7 @@ function App() {
                  {/* GitHub */}
                  <div 
                     className="block p-12 border-2 border-gray-100 dark:border-gray-800 rounded-[2rem] relative group cursor-pointer hover:border-black dark:hover:border-white transition-colors duration-300"
-                    onClick={() => window.open('https://github.com/LuN3cy', '_blank')}
+                    onClick={() => window.open('https://github.com/EtherealZenith', '_blank')}
                  >
                     <Github size={48} className="mx-auto mb-6 text-gray-400 group-hover:text-black dark:group-hover:text-white transition-colors duration-300" />
                     {/* Custom Floating Color for Github Icon on Hover */}
@@ -647,7 +647,7 @@ function App() {
                       {content.githubLabel}
                     </h3>
                     <p className="text-lg opacity-70 text-gray-500 dark:text-gray-400 transition-colors duration-300">
-                      @LuN3cy
+                      @EtherealZenith
                     </p>
                  </div>
               </div>
@@ -690,7 +690,7 @@ function App() {
 
          {/* Footer */}
          <footer className="w-full max-w-[96vw] mx-auto mt-32 border-t-2 border-black dark:border-white pt-12 flex flex-col md:flex-row justify-between items-center text-sm font-light text-gray-400 dark:text-gray-500 uppercase tracking-wide gap-4 transition-colors duration-300">
-            <p>© 2026 LUN3CY FAN</p>
+            <p>© 2026 ETHEREALZENITH FAN</p>
             <p>{content.footerDesign}</p>
          </footer>
       </main>
