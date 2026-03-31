@@ -4,7 +4,6 @@ export interface SocialLinks {
   wechat: string;
   xiaohongshu: string;
   bilibili: string;
-  px500: string;
   douyin: string;
 }
 
@@ -33,13 +32,12 @@ export const CONTACT_DATA: Record<Language, ContactContent> = {
     intro: "欢迎探讨与合作。",
     socials: {
       wechat: "BrightLight10",
-      xiaohongshu: "9562322036",
-      bilibili: "bili_4572744506",
-      px500: "EtherealZenith",
-      douyin: "25485289861",
+      xiaohongshu: "三好黄桃罐头",
+      bilibili: "三好黄桃罐头",
+      douyin: "EtherealZenith",
     },
     githubLabel: "GitHub",
-    footerDesign: "Powered by Gemini 3 Pro",
+    footerDesign: "Powered by TRAE",
   },
   en: {
     baseLabel: "BASE",
@@ -51,10 +49,9 @@ export const CONTACT_DATA: Record<Language, ContactContent> = {
     intro: "Welcome to discuss & cooperate.",
     socials: {
       wechat: "BrightLight10",
-      xiaohongshu: "9562322036",
-      bilibili: "bili_4572744506",
-      px500: "EtherealZenith",
-      douyin: "25485289861",
+      xiaohongshu: "三好黄桃罐头",
+      bilibili: "三好黄桃罐头",
+      douyin: "EtherealZenith",
     },
     githubLabel: "GitHub",
     footerDesign: "Powered by Gemini 3 Pro",

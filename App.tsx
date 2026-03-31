@@ -575,7 +575,7 @@ function App() {
                     >
                        <p className="text-sm font-bold text-black dark:text-white opacity-80 px-4 text-center">
                           Click to view profile<br/>
-                          <span className="text-xs opacity-50 font-mono">b23.tv/XNNX02Q</span>
+                          <span className="text-xs opacity-50 font-mono">三好黄桃罐头</span>
                        </p>
                     </div>
                  </div>
@@ -625,7 +625,7 @@ function App() {
                     >
                        <p className="text-sm font-bold text-black dark:text-white opacity-80 px-4 text-center">
                           Click to view profile<br/>
-                          <span className="text-xs opacity-50 font-mono">douyin.com</span>
+                          <span className="text-xs opacity-50 font-mono">EtherealZenith</span>
                        </p>
                     </div>
                  </div>

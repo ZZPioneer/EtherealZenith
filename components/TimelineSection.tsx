@@ -145,7 +145,7 @@ export const TimelineSection: React.FC<TimelineSectionProps> = ({ language }) =>
                      if (parent) {
                        const fallback = document.createElement('div');
                        fallback.className = "w-48 h-48 mx-auto bg-gray-200 dark:bg-gray-800 rounded-xl flex items-center justify-center text-gray-400 font-bold text-center p-4";
-                       fallback.innerText = language === 'zh' ? "请在 public 文件夹添加 wechat-qr.png" : "Please add wechat-qr.png to public folder";
+                       fallback.innerText = language === 'zh' ? "请关注微信公众号“三好黄桃罐头”获取验证码" : "Please follow WeChat official account '三好黄桃罐头' for verification";
                        parent.appendChild(fallback);
                      }
                    }}
