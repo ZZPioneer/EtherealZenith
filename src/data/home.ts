@@ -21,7 +21,7 @@ export const HOME_DATA: Record<Language, HomeContent> = {
       { text: "应用开发", annotation: "(vibe builder)", category: Category.DEV },
       { text: "炒粉炒饭", annotation: "(还在学)", category: null }
     ],
-    intro: "Your personal catchphrase or introduction goes here.",
+    intro: "静默予世界，炽热予偏爱.",
     selectedWorks: "精选作品",
     years: "[ 2021 — 2026 ]"
   },
