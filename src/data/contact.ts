@@ -1,10 +1,11 @@
-import { Language } from '../../types';
+import { Language } from "../../types";
 
 export interface SocialLinks {
   wechat: string;
   xiaohongshu: string;
   bilibili: string;
   px500: string;
+  douyin: string;
 }
 
 export interface ContactContent {
@@ -24,36 +25,38 @@ export interface ContactContent {
 export const CONTACT_DATA: Record<Language, ContactContent> = {
   zh: {
     baseLabel: "BASE",
-    locationValue: "Your City, Country",
+    locationValue: "杭州, 中国",
     contactLabel: "取得联系",
     emailMeLabel: "邮箱",
-    email: "your.email@example.com",
+    email: "zzeesep_10@163.com",
     hello: "你好 ;-)",
     intro: "欢迎探讨与合作。",
     socials: {
-      wechat: "YourWeChatID",
-      xiaohongshu: "YourID",
-      bilibili: "YourID",
-      px500: "YourID"
+      wechat: "BrightLight10",
+      xiaohongshu: "9562322036",
+      bilibili: "bili_4572744506",
+      px500: "EtherealZenith",
+      douyin: "25485289861",
     },
     githubLabel: "GitHub",
-    footerDesign: "Powered by Gemini 3 Pro"
+    footerDesign: "Powered by Gemini 3 Pro",
   },
   en: {
     baseLabel: "BASE",
-    locationValue: "Your City, Country",
+    locationValue: "Hangzhou, China",
     contactLabel: "Get in touch",
     emailMeLabel: "Email Me",
-    email: "your.email@example.com",
+    email: "zzeesep_10@163.com",
     hello: "Hello ;-)",
     intro: "Welcome to discuss & cooperate.",
     socials: {
-      wechat: "YourWeChatID",
-      xiaohongshu: "YourID",
-      bilibili: "YourID",
-      px500: "YourID"
+      wechat: "BrightLight10",
+      xiaohongshu: "9562322036",
+      bilibili: "bili_4572744506",
+      px500: "EtherealZenith",
+      douyin: "25485289861",
     },
     githubLabel: "GitHub",
-    footerDesign: "Powered by Gemini 3 Pro"
-  }
+    footerDesign: "Powered by Gemini 3 Pro",
+  },
 };

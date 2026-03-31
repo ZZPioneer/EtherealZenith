@@ -56,7 +56,7 @@ export const TimelineSection: React.FC<TimelineSectionProps> = ({ language }) =>
 
   const handleUnlockSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (inputAnswer.trim() === '康') {
+    if (inputAnswer.trim() === '已关注' || inputAnswer.trim().toLowerCase() === 'followed') {
       setIsSuccess(true);
       decryptPayload(inputAnswer.trim());
       // 1. Show Green Success State
@@ -125,12 +125,41 @@ export const TimelineSection: React.FC<TimelineSectionProps> = ({ language }) =>
                 </span>
              </div>
              <h2 className="text-2xl md:text-3xl font-black text-black dark:text-white mb-4">
-               {language === 'zh' ? '一个小问题' : 'Just a Question'}
+               {language === 'zh' ? '验证后访问' : 'Verify to Access'}
              </h2>
-             <p className="text-xl font-medium text-gray-500 dark:text-gray-400">
+             
+             {!isSuccess && (
+               <div className="mb-8 p-4 bg-gray-50 dark:bg-black/30 rounded-3xl border-2 border-dashed border-gray-200 dark:border-gray-800 group-hover:border-black dark:group-hover:border-white transition-colors duration-500">
+                 {/* 
+                    请将您的微信二维码图片放入 public 文件夹，
+                    并命名为 wechat-qr.png 或在此处更改路径 
+                 */}
+                 <img 
+                   src="/wechat-qr.png" 
+                   alt="WeChat QR Code" 
+                   className="w-48 h-48 mx-auto rounded-xl shadow-lg mb-4 object-cover"
+                   onError={(e) => {
+                     // Fallback if image not found
+                     e.currentTarget.style.display = 'none';
+                     const parent = e.currentTarget.parentElement;
+                     if (parent) {
+                       const fallback = document.createElement('div');
+                       fallback.className = "w-48 h-48 mx-auto bg-gray-200 dark:bg-gray-800 rounded-xl flex items-center justify-center text-gray-400 font-bold text-center p-4";
+                       fallback.innerText = language === 'zh' ? "请在 public 文件夹添加 wechat-qr.png" : "Please add wechat-qr.png to public folder";
+                       parent.appendChild(fallback);
+                     }
+                   }}
+                 />
+                 <p className="text-sm font-bold text-gray-400">
+                   {language === 'zh' ? '扫描上方二维码关注公众号' : 'Scan QR code to follow'}
+                 </p>
+               </div>
+             )}
+
+             <p className="text-xl font-medium text-gray-500 dark:text-gray-400 mb-2">
                {isSuccess 
-                  ? (language === 'zh' ? '回答正确，欢迎！' : 'Access Granted!') 
-                  : (language === 'zh' ? '名字最后一个字是？' : 'Last character of name?')
+                  ? (language === 'zh' ? '验证通过，欢迎！' : 'Access Granted!') 
+                  : (language === 'zh' ? '输入“已关注”即可解锁' : 'Enter "Followed" to unlock')
                }
              </p>
            </div>
@@ -151,7 +180,7 @@ export const TimelineSection: React.FC<TimelineSectionProps> = ({ language }) =>
                  rounded-2xl px-6 py-4 text-center text-2xl font-black outline-none transition-all
                  placeholder-gray-300 dark:placeholder-gray-700
                `}
-               placeholder={language === 'zh' ? '请输入答案' : 'Answer...'}
+               placeholder={language === 'zh' ? '已关注' : 'Followed'}
                autoFocus
              />
              <button 
@@ -166,17 +195,19 @@ export const TimelineSection: React.FC<TimelineSectionProps> = ({ language }) =>
              >
                {isSuccess 
                   ? (language === 'zh' ? '验证通过' : 'SUCCESS') 
-                  : (language === 'zh' ? '解锁' : 'UNLOCK')
+                  : (language === 'zh' ? '确认' : 'CONFIRM')
                }
              </button>
            </form>
            
            {isError && (
              <p className="absolute bottom-4 left-0 w-full text-red-500 text-sm font-bold animate-bounce">
-               {language === 'zh' ? '答案错误' : 'Incorrect Answer'}
+               {language === 'zh' ? '请输入正确的验证码' : 'Incorrect keyword'}
              </p>
            )}
-           <p className="mt-6 text-sm font-bold text-gray-400 animate-pulse">可以在联系页面点击公众号联系我 ;-)</p>
+           <p className="mt-6 text-sm font-bold text-gray-400 animate-pulse">
+             {language === 'zh' ? '关注后即可查看完整内容 ;-)' : 'Follow to see full content ;-)'}
+           </p>
         </div>
       </div>
     );

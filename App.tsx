@@ -433,7 +433,7 @@ function App() {
                  {/* Socials - WeChat */}
                  <div 
                     className="block p-12 border-2 border-gray-100 dark:border-gray-800 rounded-[2rem] hover:border-[#07C160] transition-colors duration-300 group cursor-pointer relative"
-                    onClick={() => window.open('https://mp.weixin.qq.com/s/MD5T-BsAgUi9yUo6ISY1CA', '_blank')}
+                    onClick={() => window.open('https://mp.weixin.qq.com/s/KCkWJsD_fwhvRLokK9P7Dg', '_blank')}
                     onMouseEnter={(e) => {
                        const tooltip = document.getElementById('wechat-tooltip');
                        if (tooltip) {
@@ -483,7 +483,7 @@ function App() {
                  {/* Socials - Xiaohongshu */}
                  <div 
                     className="block p-12 border-2 border-gray-100 dark:border-gray-800 rounded-[2rem] hover:border-[#EC4048] transition-colors duration-300 group cursor-pointer relative"
-                    onClick={() => window.open('https://www.xiaohongshu.com/user/profile/61bbb882000000001000e80d', '_blank')}
+                    onClick={() => window.open('https://www.xiaohongshu.com/user/profile/60c369250000000001007bb6', '_blank')}
                     onMouseEnter={(e) => {
                        const tooltip = document.getElementById('red-tooltip');
                        if (tooltip) {
@@ -533,7 +533,7 @@ function App() {
                  {/* Socials - Bilibili */}
                  <div 
                     className="block p-12 border-2 border-gray-100 dark:border-gray-800 rounded-[2rem] hover:border-[#00AEEC] transition-colors duration-300 group cursor-pointer relative"
-                    onClick={() => window.open('https://b23.tv/XNNX02Q', '_blank')}
+                    onClick={() => window.open('https://space.bilibili.com/88748859?spm_id_from=333.1387.0.0', '_blank')}
                     onMouseEnter={(e) => {
                        const tooltip = document.getElementById('bili-tooltip');
                        if (tooltip) {
@@ -580,19 +580,19 @@ function App() {
                     </div>
                  </div>
 
-                 {/* Socials - 500px */}
+                 {/* Socials - Douyin */}
                  <div 
                     className="block p-12 border-2 border-gray-100 dark:border-gray-800 rounded-[2rem] hover:border-black dark:hover:border-white transition-colors duration-300 group cursor-pointer relative"
-                    onClick={() => window.open('https://500px.com.cn/EtherealZenith', '_blank')}
+                    onClick={() => window.open(`https://www.douyin.com/user/${content.socials?.douyin}`, '_blank')}
                     onMouseEnter={(e) => {
-                       const tooltip = document.getElementById('px-tooltip');
+                       const tooltip = document.getElementById('douyin-tooltip');
                        if (tooltip) {
                           tooltip.style.opacity = '1';
                           tooltip.style.transform = 'scale(1) translateY(0)';
                        }
                     }}
                     onMouseMove={(e) => {
-                       const tooltip = document.getElementById('px-tooltip');
+                       const tooltip = document.getElementById('douyin-tooltip');
                        if (tooltip) {
                           const rect = e.currentTarget.getBoundingClientRect();
                           const x = e.clientX - rect.left;
@@ -602,30 +602,30 @@ function App() {
                        }
                     }}
                     onMouseLeave={() => {
-                       const tooltip = document.getElementById('px-tooltip');
+                       const tooltip = document.getElementById('douyin-tooltip');
                        if (tooltip) {
                           tooltip.style.opacity = '0';
                           tooltip.style.transform = 'scale(0.95) translateY(10px)';
                        }
                     }}
                  >
-                    <Aperture size={48} className="mx-auto mb-6 text-gray-400 group-hover:text-black dark:group-hover:text-white transition-colors duration-300" />
+                    <FileText size={48} className="mx-auto mb-6 text-gray-400 group-hover:text-black dark:group-hover:text-white transition-colors duration-300" />
                     <h3 className="text-2xl font-bold mb-2 text-black dark:text-white transition-colors duration-300">
-                      500px
+                      {language === 'zh' ? '抖音' : 'Douyin'}
                     </h3>
                     <p className="text-lg opacity-70 text-gray-500 dark:text-gray-400 transition-colors duration-300">
-                      {content.socials?.px500 || 'EtherealZenith'}
+                      {content.socials?.douyin || '25485289861'}
                     </p>
 
                     {/* Glassmorphism Tooltip */}
                     <div 
-                       id="px-tooltip"
+                       id="douyin-tooltip"
                        className="absolute z-50 w-64 h-32 bg-white/60 dark:bg-black/60 backdrop-blur-xl border border-white/40 dark:border-white/10 rounded-2xl shadow-2xl pointer-events-none transition-all duration-200 opacity-0 transform scale-95 translate-y-2 overflow-hidden flex items-center justify-center"
                        style={{ top: 0, left: 0 }}
                     >
                        <p className="text-sm font-bold text-black dark:text-white opacity-80 px-4 text-center">
                           Click to view profile<br/>
-                          <span className="text-xs opacity-50 font-mono">500px.com.cn</span>
+                          <span className="text-xs opacity-50 font-mono">douyin.com</span>
                        </p>
                     </div>
                  </div>
@@ -633,7 +633,7 @@ function App() {
                  {/* GitHub */}
                  <div 
                     className="block p-12 border-2 border-gray-100 dark:border-gray-800 rounded-[2rem] relative group cursor-pointer hover:border-black dark:hover:border-white transition-colors duration-300"
-                    onClick={() => window.open('https://github.com/EtherealZenith', '_blank')}
+                    onClick={() => window.open('https://github.com/ZZPioneer', '_blank')}
                  >
                     <Github size={48} className="mx-auto mb-6 text-gray-400 group-hover:text-black dark:group-hover:text-white transition-colors duration-300" />
                     {/* Custom Floating Color for Github Icon on Hover */}
